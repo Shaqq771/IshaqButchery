@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="daging_datang_view_form_wizzard" model="ir.ui.view">
+        <field name="name">Daging Datang</field>
+        <field name="model">projectmandiri.dagingdatang</field>
+        <field name="arch" type="xml">
+            <form string="Form Kedatangan Daging">
+                <group>
+                    <field name="daging_id" />
+                    <field name="jumlah" />
+                </group>
+
+                <footer>
+                    <button name='button_daging_datang'
+                            type='object'
+                            string='Simpan'
+                            class='btn btn-primary' />
+                    <button string='Cancel'
+                            special='cancel'
+                            class='btn btn-secondary' />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="daging_datang_action_wizzard" model="ir.actions.act_window">
+        <field name="name">Kedatangan Daging</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">projectmandiri.dagingdatang</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref='daging_datang_view_form_wizzard' />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        id="daging_datang_menu_action_wizzard"
+        name="Input Daging"
+        parent="projectmandiri_menu_root"
+        action="daging_datang_action_wizzard"
+        sequence="48"/>
+
+</odoo>

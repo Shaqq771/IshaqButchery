@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="projectmandiri_negaraasal_view_tree" model="ir.ui.view">
+        <field name="name">projectmandiri.negaraasal.view.tree</field>
+        <field name="model">projectmandiri.negaraasal</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="kode_negara" />
+                <field name="kode_daging" />
+
+                <field name="jumlah" /> 
+                <field name="daftar" />           
+            </tree>
+        </field>
+    </record>
+
+    <record id="projectmandiri_negaraasal" model="ir.ui.view">
+        <field name="name">projectmandiri.negaraasal.view.form</field>
+        <field name="model">projectmandiri.negaraasal</field>
+        <field name="arch" type="xml">
+            <form string="Negara Asal">
+                <sheet>
+                    <group name="Negara" string="Kode">
+                        <field name="name" />
+                        <field name="kode_negara" />
+                        <field name="jumlah" />
+                    </group>
+                    <group name="Kodedaging" string="">
+                        <field name="kode_daging" />
+                        <field name="daging_ids" />
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="projectmandiri_negaraasal_action" model="ir.actions.act_window">
+        <field name="name">Negara Asal</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">projectmandiri.negaraasal</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="projectmandiri_negaraasal_menu_act"
+        name="Negara Asal"
+        action="projectmandiri_negaraasal_action"
+        parent="projectmandiri_daging_menu_categ"
+        sequence="10"/>
+
+</odoo>

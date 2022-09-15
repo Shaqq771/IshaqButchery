@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="projectmandiri_daging_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Daging</field>
+        <field name="model">projectmandiri.daging</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="harga_daging"/>
+                <field name="stok" />
+                <field name="negaraasal_id"/>
+                <field name="perusahaan_id" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- projectmandiri.daging form view -->
+    <record id="projectmandiri_daging_view_form" model="ir.ui.view">
+        <field name="name">Form Daging</field>
+        <field name="model">projectmandiri.daging</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <button name="%(projectmandiri.daging_datang_action_wizzard)d"
+                            type="action"
+                            string="Input Daging"
+                            class="btn btn-primary my-3"/>
+                </header>
+                <sheet>
+                    <group name="Daging" string="Daging">
+                        <field name="name" />
+                        <field name="harga_daging" />
+                        <field name="stok" />
+                    </group>
+                    <group name="Negara Asal" string="Negara Asal">
+                        <field name="negaraasal_id" />
+                    </group>
+                    <group name="perusahaan" string="Perusahaan">
+                        <field name="perusahaan_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="projectmandiri_daging_action" model="ir.actions.act_window">
+        <field name="name">Daftar Daging</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">projectmandiri.daging</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="projectmandiri_daging_menu_act"
+        name="Daftar Daging"
+        action="projectmandiri_daging_action"
+        parent="projectmandiri_daging_menu_categ"
+        sequence="20"/>
+    
+    
+
+</odoo>

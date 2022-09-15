@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="projectmandiri_breeder_view_tree_inherit" model="ir.ui.view">
+        <field name="name">Daftar Breeder</field>
+        <field name="model">projectmandiri.breeder</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="projectmandiri_object_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id_breeder"/>
+            </xpath>              
+        </field>
+    </record>
+
+    <record id="projectmandiri_breeder_view_form_inherit" model="ir.ui.view">
+        <field name="name">Form Breeder</field>
+        <field name="model">projectmandiri.breeder</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="projectmandiri_object_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//sheet//group[2]" position="after">
+                <group name="id" string="ID">
+                    <field name="id_breeder"/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='alamat']" position="attributes">
+               <attribute name="string">Address</attribute>
+            </xpath>          
+        </field> 
+    </record>
+
+    <record id="projectmandiri_breeder_action" model="ir.actions.act_window">
+        <field name="name">Breeder</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">projectmandiri.breeder</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem 
+        id="projectmandiri_breeder_menu_act"
+        name="Breeder"
+        parent="projectmandiri_object_menu_categ"
+        action="projectmandiri_breeder_action"
+        sequence="10"/>
+
+</odoo>

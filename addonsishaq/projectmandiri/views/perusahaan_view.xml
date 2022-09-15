@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+    <record id="projectmandiri_perusahaan_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Perusahaan</field>
+        <field name="model">projectmandiri.perusahaan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name" />
+                <field name="alamat" />
+                <field name="no_telp" />
+                <field name="daging_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="projectmandiri_perusahaan_view_form" model="ir.ui.view">
+        <field name="name">Form Perusahaan</field>
+        <field name="model">projectmandiri.perusahaan</field>
+        <field name="arch" type="xml">
+            <form string="Perusahaan">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name" />
+                        <field name="alamat" />
+                        <field name="no_telp" />
+                    </group>
+                    <group name="daging" string="Daging">
+                        <field name="daging_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+>
+    <record id="projectmandiri_perusahaan_action" model="ir.actions.act_window">
+        <field name="name">Perusahaan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">projectmandiri.perusahaan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="projectmandiri_perusahaan_menu_act" 
+        name="Perusahaan" 
+        parent="projectmandiri_menu_root" 
+        action="projectmandiri_perusahaan_action" 
+        sequence="40"/>
+
+</odoo>

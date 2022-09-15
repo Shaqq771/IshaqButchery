@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <menuitem
+        id="projectmandiri_menu_root"
+        name="Ishaq Butchery"
+        sequence="10"/>
+
+    <menuitem
+        id="projectmandiri_daging_menu_categ"
+        name="Daging"
+        parent="projectmandiri_menu_root"
+        sequence="10"/>
+
+    <menuitem
+        id="projectmandiri_object_menu_categ"
+        name="Professional"
+        parent="projectmandiri_menu_root"
+        sequence="20"/>
+
+    <menuitem
+	  id="projectmandiri_transaksi_menu_categ"
+	  name="Transaksi"
+	  parent="projectmandiri_menu_root"
+	  sequence="42"/>
+
+</odoo>

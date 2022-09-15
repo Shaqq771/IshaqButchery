@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_projectmandiri_projectmandiri,access.projectmandiri.negaraasal,model_projectmandiri_negaraasal,,1,1,1,1
+access_projectmandiri_daging,access.projectmandiri.daging,model_projectmandiri_daging,,1,1,1,1
+access_projectmandiri_object,access.projectmandiri.object,model_projectmandiri_object,,1,1,1,1
+access_projectmandiri_breeder,access.projectmandiri.breeder,model_projectmandiri_breeder,,1,1,1,1
+access_projectmandiri_perusahaan,access.projectmandiri.perusahaan,model_projectmandiri_perusahaan,,1,1,1,1
+access_projectmandiri_penjualan,access.projectmandiri.penjualan,model_projectmandiri_penjualan,,1,1,1,1
+access_projectmandiri_detailpenjualan,access.projectmandiri.detailpenjualan,model_projectmandiri_detailpenjualan,,1,1,1,1
+access_projectmandiri_dagingdatang,access.projectmandiri.dagingdatang,model_projectmandiri_dagingdatang,,1,1,1,1
