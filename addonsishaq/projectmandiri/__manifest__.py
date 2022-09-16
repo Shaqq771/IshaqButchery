@@ -25,6 +25,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'wizard/dagingdatang_wizard_view.xml',
         'views/views.xml',
         'views/templates.xml',
         'views/menu.xml',
@@ -36,8 +37,6 @@
         'views/perusahaan_view.xml',
         'views/penjualan_view.xml',
         'report/report.xml',
-        'views/dagingdatang_view.xml',
-        'wizard/dagingdatang_wizard_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

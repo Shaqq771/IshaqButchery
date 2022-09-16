@@ -23,7 +23,6 @@
             </form>
         </field>
     </record>
-
     <record id="daging_datang_action_wizzard" model="ir.actions.act_window">
         <field name="name">Kedatangan Daging</field>
         <field name="type">ir.actions.act_window</field>
@@ -32,7 +31,6 @@
         <field name="view_id" ref='daging_datang_view_form_wizzard' />
         <field name="target">new</field>
     </record>
-
     <menuitem 
         id="daging_datang_menu_action_wizzard"
         name="Input Daging"

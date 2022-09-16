@@ -5,7 +5,7 @@
         <field name="model">projectmandiri.perusahaan</field>
         <field name="report_type">xlsx</field>
         <field name="report_name">projectmandiri.report_perusahaan_xlsx</field>
-        <field name="report_file">projectmandiri.report_perushaaan_xlsx</field>
+        <field name="report_file">projectmandiri.report_perusahaan_xlsx</field>
         <field name="binding_model_id" ref="model_projectmandiri_perusahaan"/>
         <field name="binding_type">report</field>
     </record>

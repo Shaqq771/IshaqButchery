@@ -2,7 +2,7 @@ from odoo import models, fields
 
 
 class PartnerXlsx(models.AbstractModel):
-    _name = 'report.projectmandiri.report_supplier_xlsx'
+    _name = 'report.projectmandiri.report_perusahaan_xlsx'
     _inherit = 'report.report_xlsx.abstract'
     tgl_laporan = fields.Date.today()
 
